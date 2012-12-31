@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<style type="text/css">
+			* {
+				margin:0;
+				padding:0;
+			}
+			html, body {
+				height:100%;
+				width: 100%;
+				overflow:hidden;
+			}
+      p.close {
+        display:block;
+        padding:20px 0;
+        text-align: center;
+      }
+      p.close a {
+        color:#FFF;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .wrapper {
+        margin-top:-150px;
+        position:relative;
+        top:50%;
+      }
+      .greystripe {
+        width:300px;
+        height:250px;
+        margin:0 auto;
+      }
+		</style>
+	</head>
+	<body>
+	  <div class="wrapper">
+	    
+	    <div class="greystripe">
+    		<script type="text/javascript">
+    			gsad = {};
+    			gsad.site_id = "21596";
+    			gsad.sizes = ["300x250"];
+    		</script>
+    		<script type="text/javascript" src="http://c.greystripe.com/gsswf/ad.js"></script>
+      </div>
+
+      <p class="close">   
+        <a href="#" id="closeAd">Continue to game -></a>
+      </p>
+    </div>
+
+    <script type="text/javascript">
+      document.querySelector('#closeAd').addEventListener('click', function(e) {
+        e.preventDefault()
+        parent.postMessage("adclose","*");
+      })
+    </script>
+	</body>
+</html>
